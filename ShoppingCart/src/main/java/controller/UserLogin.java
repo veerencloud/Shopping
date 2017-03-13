@@ -14,9 +14,9 @@ import javax.servlet.http.HttpSession;
 
 import model.AdminImpl_DAO;
 import model.Products;
-import model.Products_DAO;
+import model.ProductsImpl_DAO;
 import model.User;
-import model.UserLogin_DAO;
+import model.UserLoginImpl_DAO;
 
 @WebServlet("/UserLogin")
 public class UserLogin extends HttpServlet {
@@ -24,9 +24,9 @@ public class UserLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	User user = new User();
-	UserLogin_DAO ud = new UserLogin_DAO();
+	UserLoginImpl_DAO ud = new UserLoginImpl_DAO();
 	AdminImpl_DAO ad = new AdminImpl_DAO();
-	Products_DAO pd = new Products_DAO();
+	ProductsImpl_DAO pd = new ProductsImpl_DAO();
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

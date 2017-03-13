@@ -12,14 +12,14 @@ import javax.servlet.http.HttpSession;
 
 import model.AdminImpl_DAO;
 import model.Products;
-import model.Products_DAO;
+import model.ProductsImpl_DAO;
 
 @WebServlet("/AdminAdd")
 public class AdminAdd extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	Products_DAO pd = new Products_DAO();
+	ProductsImpl_DAO pd = new ProductsImpl_DAO();
 	AdminImpl_DAO ad = new AdminImpl_DAO();
 
 	@Override

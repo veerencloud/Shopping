@@ -1,6 +1,6 @@
 <%@page import="model.Products"%>
 <%@page import="java.sql.PreparedStatement"%>
-<%@page import="model.UserLogin_DAO"%>
+<%@page import="model.UserLoginImpl_DAO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.Connection"%>
@@ -53,7 +53,7 @@ th {
 				<th>Password</th>
 			</tr>
 			<%
-				UserLogin_DAO ud = new UserLogin_DAO();
+				UserLoginImpl_DAO ud = new UserLoginImpl_DAO();
 				PreparedStatement pst = null;
 				Connection con = ud.connection_db();
 				pst = con.prepareStatement("select * from users");

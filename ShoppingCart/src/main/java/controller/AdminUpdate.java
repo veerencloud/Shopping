@@ -12,14 +12,14 @@ import javax.servlet.http.HttpSession;
 
 import model.AdminImpl_DAO;
 import model.Products;
-import model.Products_DAO;
+import model.ProductsImpl_DAO;
 
 @WebServlet("/AdminUpdate")
 public class AdminUpdate extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	AdminImpl_DAO ad = new AdminImpl_DAO();
-	Products_DAO pd = new Products_DAO();
+	ProductsImpl_DAO pd = new ProductsImpl_DAO();
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

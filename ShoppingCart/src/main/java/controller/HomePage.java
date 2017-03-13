@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.Products;
-import model.Products_DAO;
-import model.UserLogin_DAO;
+import model.ProductsImpl_DAO;
+import model.UserLoginImpl_DAO;
 
 @WebServlet("/HomePage")
 public class HomePage extends HttpServlet {
@@ -23,8 +23,8 @@ public class HomePage extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		Products_DAO pd = new Products_DAO();
-		UserLogin_DAO ud = new UserLogin_DAO();
+		ProductsImpl_DAO pd = new ProductsImpl_DAO();
+		UserLoginImpl_DAO ud = new UserLoginImpl_DAO();
 		try {
 
 			List<Products> list = new ArrayList<Products>();

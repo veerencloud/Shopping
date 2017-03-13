@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.Products;
-import model.Products_DAO;
+import model.ProductsImpl_DAO;
 
 @WebServlet("/ProductCart")
 public class ProductCart extends HttpServlet {
@@ -22,7 +22,7 @@ public class ProductCart extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		Products_DAO pd = new Products_DAO();
+		ProductsImpl_DAO pd = new ProductsImpl_DAO();
 
 		List<Products> itemslist = pd.allProducts();
 

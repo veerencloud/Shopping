@@ -6,11 +6,11 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdminImpl_DAO implements Admin_Interface {
+public class AdminImpl_DAO implements Admin_DAO {
 
 	PreparedStatement pst=null;
 	Connection con;
-	UserLogin_DAO ud= new UserLogin_DAO();
+	UserLoginImpl_DAO ud= new UserLoginImpl_DAO();
 
 
 
@@ -63,7 +63,7 @@ public class AdminImpl_DAO implements Admin_Interface {
 	@Override
 	public void adminedit(int product_ID, String product_name, float product_price, int product_qty) {
 		con=ud.connection_db();
-		Products_DAO pd= new Products_DAO();
+		ProductsImpl_DAO pd= new ProductsImpl_DAO();
 		try{
 			pd.productstable_db();
 			System.out.println(product_ID);
@@ -88,7 +88,7 @@ public class AdminImpl_DAO implements Admin_Interface {
 	@Override
 	public void addprod(int product_ID, String product_name, float product_price, int product_qty) {
 		try{
-			Products_DAO pd= new Products_DAO();
+			ProductsImpl_DAO pd= new ProductsImpl_DAO();
 			con=ud.connection_db();
 			pd.productstable_db();
 			pst=con.prepareStatement("insert into Products (product_ID, product_name, product_price, product_qty) values(?,?,?,?)");			
@@ -108,7 +108,7 @@ public class AdminImpl_DAO implements Admin_Interface {
 	@Override
 	public void deleteprod(int product_ID) {
 		try{
-		Products_DAO pd= new Products_DAO();
+		ProductsImpl_DAO pd= new ProductsImpl_DAO();
 		con=ud.connection_db();
 		pd.productstable_db();
 		pst=con.prepareStatement("delete Products where product_ID=?");			

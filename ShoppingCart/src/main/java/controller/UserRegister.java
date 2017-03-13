@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.UserLogin_DAO;
+import model.UserLoginImpl_DAO;
 
 @WebServlet("/UserRegister")
 public class UserRegister extends HttpServlet {
@@ -25,7 +25,7 @@ public class UserRegister extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		UserLogin_DAO ud = new UserLogin_DAO();
+		UserLoginImpl_DAO ud = new UserLoginImpl_DAO();
 		String Firstname = req.getParameter("Firstname");
 		String Lastname = req.getParameter("Lastname");
 		String UserName = req.getParameter("UserName");
